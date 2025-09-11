@@ -11,6 +11,6 @@ export type SourceGroup = Record<string, Source[]>;
 export interface FetchResult {
   groupName: string;
   data: any;
-  timestamp: Date;
+  timestamp: string;
   source: string;
 }
