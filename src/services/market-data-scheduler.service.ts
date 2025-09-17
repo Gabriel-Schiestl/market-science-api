@@ -14,7 +14,7 @@ export class MarketDataScheduler {
     @Inject('RABBITMQ_SERVICE') private readonly client: ClientProxy,
   ) {}
 
-  @Cron(CronExpression.EVERY_SECOND)
+  @Cron(CronExpression.EVERY_MINUTE)
   async fetchAllMarketData(): Promise<void> {
     this.logger.log('Starting scheduled market data fetch');
 
